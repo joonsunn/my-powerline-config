@@ -221,3 +221,58 @@ Datetime formatting is based on python strftime method. More info:
 
 <https://pynative.com/python-datetime-format-strftime/>
 
+#### 22. Make prompt appear on new line
+
+Reorganise ```/theme/shell/default.config``` to have following structure:
+
+```json
+{
+"segments" : {
+	"above":[{
+		"left": [{...}],
+		"right": [{...}]
+	}],
+	"left":[{...}],
+	"right":[{...}]
+	}
+}
+```
+
+Modifications to make next line prompt:
+
+```json
+{
+"segments" : {
+	"above":[{
+		"left": [
+			{
+				"function": "powerline.segments.common.time.date",
+				"args": {
+					"istime": true,
+					"format": "%Y-%m-%d %H:%M:%S"
+				},
+				"priority": 40
+			},
+			{...}
+			{
+				"function": "powerline_gitstatus.gitstatus",
+				"priority": 40
+			}
+		],
+		"right": [{...}]
+	}],
+	"left":[
+		{
+			"type": "string",
+			"contents": "$",
+			"highlight_groups": ["continuation:current"]
+		}
+	],
+	"right":[{...}]
+	}
+}
+```
+
+Should make the terminal look like this:
+
+![Alt text](image-10.png)
