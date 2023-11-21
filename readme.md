@@ -275,4 +275,4 @@ Modifications to make next line prompt:
 
 Should make the terminal look like this:
 
-![Alt text](image-10.png)
+![Alt text](image-11.png)
