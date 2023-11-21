@@ -154,6 +154,8 @@ Some fiddling around with the install.sh file might be required to get the insta
 
 More info: <https://askubuntu.com/questions/3697/how-do-i-install-fonts>
 
+In the end I modified `install.sh` to install the fonts in `/home/**YOUR_USER_NAME**/.local/share/fonts`
+
 #### 17. Change font in terminal settings
 
 ![Alt text](image-3.png)
