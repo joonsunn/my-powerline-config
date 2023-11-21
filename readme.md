@@ -209,7 +209,15 @@ Add the following to ```/.config/powerline/themes/shell```
 			...
 	}
 ```
-
 Should look as follows:
 
 ![Alt text](image-9.png)
+
+Datetime formatting is based on python strftime method. More info:
+
+<https://powerline.readthedocs.io/en/latest/configuration/segments/common.html#module-powerline.segments.common.time>
+
+<https://unix.stackexchange.com/questions/228227/how-to-customize-a-segment-of-powerlinefor-bash-shell-ps1-layout-specifically>
+
+<https://pynative.com/python-datetime-format-strftime/>
+
