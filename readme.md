@@ -42,7 +42,7 @@ Copy the line that ends in `/bin/powerline-daemon` and save it somewhere.
 
 ![Alt text](image.png)
 
-#### 6. Locate powerline.sh
+#### 6. Locate powerline.sh (takes similarly long as Step 5)
 
 ```bash
 find / 2> /dev/null | grep powerline.sh
@@ -62,13 +62,15 @@ code ~/.bashrc
 
 ```bash
 #Powerline
-export PATH="PATH:/home/foo/.local/bin/"
+export PATH="PATH:/home/**YOUR_USER_NAME**/.local/bin/"
 export LC_ALL=en_US.utf-8
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-source /home/foo/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+source /home/**YOUR_USER_NAME**/.local/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
 ```
+
+Remember to change all instances of `**YOUR_USER_NAME**` to your own system username!
 
 #### 9. Make the following folders
 
@@ -80,11 +82,11 @@ mkdir -p ~/.config/powerline/themes/shell
 #### 10. Copy original ```default.json``` config files into new folder
 
 ```bash
-cp /home/foo/.local/lib/python3.10/site-packages/powerline/config_files/colorschemes/default.json ~/.config/powerline/colorschemes
+cp /home/**YOUR_USER_NAME**/.local/lib/python3.10/site-packages/powerline/config_files/colorschemes/default.json ~/.config/powerline/colorschemes
 ```
 
 ```bash
-cp /home/foo/.local/lib/python3.10/site-packages/powerline/config_files/themes/shell/default.json ~/.config/powerline/themes/shell
+cp /home/**YOUR_USER_NAME**/.local/lib/python3.10/site-packages/powerline/config_files/themes/shell/default.json ~/.config/powerline/themes/shell
 ```
 
 #### 11. Open colorscheme/default.json
@@ -167,3 +169,20 @@ powerline-daemon --replace
 #### 19. Done
 
 ![Alt text](image-5.png)
+
+#### 20. Bonus: Fix gitstatus not showing correctly in VS Code
+
+VS Code requires additional settings to make gitstatus appear. As it is, it will show a box in place of the branch symbol:
+![Alt text](image-7.png)
+
+Change terminal font to one of the powerline fonts installed. Name can be referred to in terminal settings as in step 17.
+
+Manually type in the font name incased in inverted commas. E.g.
+
+```
+'Droid Sans Mono Dotted For Powerline'
+```
+
+![Alt text](image-6.png)
+
+![Alt text](image-8.png)
