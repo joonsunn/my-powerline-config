@@ -172,7 +172,7 @@ powerline-daemon --replace
 
 ![Alt text](image-5.png)
 
-#### 20. Bonus: Fix gitstatus not showing correctly in VS Code
+#### 20. Fix gitstatus not showing correctly in VS Code
 
 VS Code requires additional settings to make gitstatus appear. As it is, it will show a box in place of the branch symbol:
 ![Alt text](image-7.png)
@@ -188,3 +188,28 @@ Manually type in the font name incased in inverted commas. E.g.
 ![Alt text](image-6.png)
 
 ![Alt text](image-8.png)
+
+#### 21. Add time to prompt
+
+Add the following to ```/.config/powerline/themes/shell```
+
+```bash
+{
+    "segments": {
+        "left": [
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "istime": true,
+                    "format": "%H:%M:%S"
+                }
+            },
+			...
+			]
+			...
+	}
+```
+
+Should look as follows:
+
+![Alt text](image-9.png)
