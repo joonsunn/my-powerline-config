@@ -276,3 +276,8 @@ Modifications to make next line prompt:
 Should make the terminal look like this:
 
 ![Alt text](image-11.png)
+
+More info:
+
+<https://www.reddit.com/r/powerl.ine/comments/jwxga0/how_do_i_get_the_prompt_on_a_second_line/>
+
